@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        tools:context=".view.ui.authentication.LoginScreenFragment">
+
+
+
+
+        <EditText
+            android:id="@+id/userName"
+            style="@style/userNameTheme"
+            android:hint="@string/user_name"
+            android:paddingStart="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:hint="@string/password"
+            android:paddingStart="@dimen/_15sdp"
+            style="@style/passwordTheme"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/loginButton"
+            style="@style/loginButtonTheme"
+            android:text="@string/login"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

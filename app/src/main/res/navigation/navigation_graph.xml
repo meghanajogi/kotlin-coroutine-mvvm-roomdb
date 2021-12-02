@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/addFragment">
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.kotlin_coroutine_mvvm_roomdb.ui.add.AddFragment"
+        android:label="AddFragment" >
+        <action
+            android:id="@+id/action_addFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.kotlin_coroutine_mvvm_roomdb.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardScreenFragment"
+        android:name="com.example.kotlin_coroutine_mvvm_roomdb.ui.onboard.OnboardScreenFragment"
+        android:label="fragment_onboard_screen"
+        tools:layout="@layout/fragment_onboard_screen" >
+        <action
+            android:id="@+id/action_onboardScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.kotlin_coroutine_mvvm_roomdb.ui.userList.UserListFragment"
+        android:label="UserListFragment" >
+        <action
+            android:id="@+id/action_userListFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+</navigation>
